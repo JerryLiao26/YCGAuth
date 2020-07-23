@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2018", "esnext.asynciterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"]
+    }
+  },
+  "exclude": ["./dist"]
+}
