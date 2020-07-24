@@ -2,17 +2,23 @@
   "name": "@ycg/auth",
   "version": "0.0.1",
   "description": "YCGAuth is a semantic authorizing tool in JavaScript",
-  "module": "dist/index.js",
+  "keywords": [
+    "auth",
+    "graphql",
+    "mongodb",
+    "mariadb",
+    "mysql"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/JerryLiao26/YCGAuth.git",
   "repository": "https://github.com/JerryLiao26/YCGAuth.git",
   "author": "JerryLiao26 <jerryliao26@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "rm -rf dist && webpack-cli",
+    "build": "rm -rf dist && tsc -p src/types/tsconfig.json && webpack-cli",
     "lint": "eslint src --fix --ext .ts"
-  },
-  "moduleNameMapper": {
-    "^@src/(.*)$": "<rootDir>/src/$1"
   },
   "devDependencies": {
     "@types/mongodb": "^3.5.25",
