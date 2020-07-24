@@ -5,8 +5,8 @@ const db = new AuthDB({
   dbHost: 'localhost',
   dbPort: 27017,
   dbName: 'YuChiGong',
-  dbPass: 'testPass',
-  dbUser: 'root',
+  dbPass: '',
+  dbUser: '',
 });
 
-console.log('DB::', db.introduce());
+db.connect();

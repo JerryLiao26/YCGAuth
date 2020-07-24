@@ -16,6 +16,9 @@ module.exports = {
   },
   externals: [NodeExternals()],
   resolve: {
+    alias: {
+      '@src': path.resolve('src'),
+    },
     extensions: ['.js', '.ts'],
   },
   optimization: {

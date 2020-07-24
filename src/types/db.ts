@@ -1,19 +1,16 @@
-export interface DBConfig {
-  type: 'MongoDB' | 'MySQL';
+export interface DBConfigSafe {
+  type: DBType;
   dbHost: string;
   dbPort: number;
   dbName: string;
   dbUser: string;
+}
+
+export interface DBConfig extends DBConfigSafe {
   dbPass: string;
 }
 
-export interface DBConfigSafe {
-  type: 'MongoDB' | 'MySQL';
-  dbHost: string;
-  dbPort: number;
-  dbName: string;
-  dbUser: string;
-}
+export type DBType = 'MongoDB' | 'MySQL' | 'MariaDB';
 
 export interface DataItem {
   id?: string;
@@ -21,9 +18,9 @@ export interface DataItem {
 }
 
 export interface DBClientWrap {
-  add: (item: DataItem) => Promise<DataItem>;
-  update: (item: DataItem) => Promise<DataItem>;
-  remove: (id: string) => Promise<void>;
-  count: () => Promise<number>;
+  add: (item: DataItem, field: string) => Promise<DataItem>;
+  update: (item: DataItem, field: string) => Promise<DataItem>;
+  remove: (id: string, field: string) => Promise<void>;
+  count: (field: string) => Promise<number>;
   stop: () => Promise<void>;
 }
