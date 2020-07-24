@@ -20,6 +20,8 @@ export default class AuthDB {
         this.db = await mongoInit(this.config);
         break;
     }
+
+    this.db.stop();
   }
 
   public introduce(): string {

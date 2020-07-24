@@ -29,10 +29,20 @@ class MongoClientWrap implements DBClientWrap {
   }
 
   public async remove(id: string) {
+    console.log('ID::', id);
     return Promise.resolve();
   }
 
   public async count() {
     return Promise.resolve(0);
+  }
+
+  public async stop() {
+    try {
+      await this.db.close();
+      return Promise.resolve();
+    } catch {
+      return Promise.reject();
+    }
   }
 }

@@ -25,4 +25,5 @@ export interface DBClientWrap {
   update: (item: DataItem) => Promise<DataItem>;
   remove: (id: string) => Promise<void>;
   count: () => Promise<number>;
+  stop: () => Promise<void>;
 }
