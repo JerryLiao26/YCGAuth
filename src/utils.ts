@@ -1,4 +1,4 @@
-import { DBConfig, DBConfigSafe, DataItem } from './types';
+import { DBConfig, DBConfigSafe, DataItem } from '@src/types';
 
 export function stripDBPass(config: DBConfig): DBConfigSafe {
   const obj = Object.keys(config).reduce((prev, curr) => {
