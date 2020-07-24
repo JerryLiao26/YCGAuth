@@ -2,6 +2,10 @@ src/
 
 .gitignore
 .prettierrc.js
-rollup.config.js
+webpack.config.js
 tsconfig.json
 yarn.lock
+
+.yarnrc
+
+*.log

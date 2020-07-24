@@ -4,4 +4,6 @@ dist/
 
 *.log
 
+.yarnrc
+
 .DS_Store

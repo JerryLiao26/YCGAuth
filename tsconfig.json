@@ -8,6 +8,7 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
     "forceConsistentCasingInFileNames": true,
     "lib": ["es2018", "esnext.asynciterable"],
     "baseUrl": ".",
@@ -15,5 +16,5 @@
       "@src/*": ["src/*"]
     }
   },
-  "exclude": ["./dist"]
+  "exclude": ["lib", "dist"]
 }
